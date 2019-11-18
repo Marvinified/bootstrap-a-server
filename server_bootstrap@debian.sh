@@ -44,11 +44,19 @@ docker-compose --version
 apt-get install nginx
 service nginx start
 service nginx status
+
 # Certbot
 yes "y" | add-apt-repository ppa:certbot/certbot
 yes "y" | apt install python-certbot-nginx
 
+certbot -d $1
+
 cp nginx.conf /etc/nginx/sites-enabled
+service nginx restart
+service nginx status
 
-echo "2" | certbot —-nginx -d $1
-
+echo "Add the public key to your git cloud (Bitbucket or github) account"
+echo "                                                                   "
+cat ~/.ssh/id_rsa.pub
+echo "                                                                   "
+echo "run ssh  T git@bitbucket.org to verify after adding."
