@@ -52,9 +52,12 @@ yes "y" | apt install python-certbot-nginx
 certbot -d $1
 
 cp nginx.conf /etc/nginx/sites-enabled
+rm  /etc/nginx/sites-enabled/default
 service nginx restart
 service nginx status
 
+echo "-------------------------------------------------------------------"
+echo "-------------------------------------------------------------------"
 echo "Add the public key to your git cloud (Bitbucket or github) account"
 echo "                                                                   "
 cat ~/.ssh/id_rsa.pub
