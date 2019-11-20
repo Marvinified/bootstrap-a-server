@@ -55,7 +55,7 @@ sudo sh setup.sh dev.talkabyte.com
 After succesful running of the script an `ssh key` would be displayed on the console add it to your account ssh key
 
 - For Github: https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
-- For Bitbucket: https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+- For Bitbucket: https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html#SetupanSSHkey-Step4.AddthepublickeytoyourBitbucketsettings
 
 ### clone project from repo
 - Clone your project and run  ( make sure it is running on port specified in the `nginx.conf`.)
